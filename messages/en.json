@@ -1,0 +1,12 @@
+{
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "HomePage": {
+    "badge": "Welcome",
+    "title": "Discover the Ethereal Breathe, Explore the Mystical",
+    "description": "A journey into the unknown realms of spirituality and consciousness.",
+    "cta": "Get Started",
+    "secondary": "Learn More"
+  }
+}
