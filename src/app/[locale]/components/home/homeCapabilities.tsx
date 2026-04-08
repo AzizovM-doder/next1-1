@@ -1,22 +1,23 @@
 import Image from "next/image";
 import { Sparkles, PenTool, Droplet, Layers } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const HomeCapabilities = () => {
+  const t = useTranslations('HomeCapabilities');
   return (
     <section className="bg-[#F8FAFC] py-20">
       <div className="max-w-7xl mx-auto p-5">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <p className="text-[#386382] uppercase font-semibold tracking-[0.26em] text-sm">
-              Capabilities
+              {t('label')}
             </p>
             <h2 className="mt-3 text-4xl lg:text-5xl font-bold leading-tight">
-              Precision in Every Component
+              {t('title')}
             </h2>
           </div>
           <p className="mt-4 text-[#596064] text-base lg:text-lg lg:text-right lg:max-w-1/3">
-            Crafted with the “Breathable Interface” philosophy to ensure
-            long-term usability and aesthetic longevity.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -26,11 +27,9 @@ const HomeCapabilities = () => {
               <div className="inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-[#E7F1FA] text-[#386382] mb-6">
                 <Sparkles size={22} />
               </div>
-              <h3 className="text-3xl font-bold mb-4">Atmospheric Depth</h3>
+              <h3 className="text-3xl font-bold mb-4">{t('atmospheric')}</h3>
               <p className="text-[#596064] leading-7">
-                Moving beyond flat design. We use tonal layers and light to
-                create a sense of physical space and hierarchy without
-                cluttering borders.
+                {t('atmosphericDesc')}
               </p>
             </div>
             <div className="mt-8 overflow-hidden rounded-[28px] bg-slate-100">
@@ -51,10 +50,10 @@ const HomeCapabilities = () => {
                   <PenTool size={20} />
                 </div>
                 <h4 className="text-xl font-semibold mb-2">
-                  Editorial Typography
+                  {t('editorial')}
                 </h4>
                 <p className="text-[#596064] leading-7">
-                  Manrope and Plus Jakarta Sans paired for structural authority.
+                  {t('editorialDesc')}
                 </p>
               </article>
 
@@ -62,10 +61,9 @@ const HomeCapabilities = () => {
                 <div className="inline-flex items-center justify-center h-12 w-12 rounded-2xl bg-[#F5F5FF] text-[#386382] mb-4">
                   <Droplet size={20} />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Tonal Palette</h4>
+                <h4 className="text-xl font-semibold mb-2">{t('tonal')}</h4>
                 <p className="text-[#596064] leading-7">
-                  Soft blues and mineral grays for a calm, professional
-                  environment.
+                  {t('tonalDesc')}
                 </p>
               </article>
             </div>
@@ -82,11 +80,10 @@ const HomeCapabilities = () => {
               </div>
               <div>
                 <h4 className="text-2xl font-bold mb-2">
-                  Performance Optimized
+                  {t('performance')}
                 </h4>
                 <p className="text-[#596064] leading-7">
-                  Lightweight code and optimized assets for an ethereal
-                  experience that feels fast.
+                  {t('performanceDesc')}
                 </p>
               </div>
             </article>

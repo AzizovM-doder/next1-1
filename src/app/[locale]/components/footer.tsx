@@ -1,6 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 const Footer = () => {
+  const t = useTranslations('Footer');
   const year = new Date().getFullYear();
 
   return (
@@ -9,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div className="flex flex-col gap-3">
             <h3 className="text-xl font-bold text-[#1F4A63]">
-              The Ethereal Studio
+              {t('company')}
             </h3>
             <p className="text-sm text-[#64748B]">
               © {year} The Ethereal Studio. All rights reserved.
@@ -18,16 +21,16 @@ const Footer = () => {
 
           <div className="flex flex-wrap gap-8">
             <p className="text-[#64748B] hover:text-[#386382] font-medium transition-colors">
-              Privacy Policy
+              {t('privacy')}
             </p>
             <p className="text-[#64748B] hover:text-[#386382] font-medium transition-colors">
-              Terms of Service
+              {t('terms')}
             </p>
             <p className="text-[#64748B] hover:text-[#386382] font-medium transition-colors">
-              LinkedIn
+              {t('linkedin')}
             </p>
             <p className="text-[#64748B] hover:text-[#386382] font-medium transition-colors">
-              Instagram
+              {t('instagram')}
             </p>
           </div>
         </div>
